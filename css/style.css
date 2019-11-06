@@ -1,0 +1,464 @@
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box; 
+}
+
+body {
+    background: #f0f8ff;
+    color: black;
+}
+
+
+/*****HEADER start*****/
+
+.header {
+    height: 100vh;
+    width: 100%;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-navigation {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.header-navigation ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-navigation ul li {
+    text-transform: uppercase;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.header-navigation ul li a {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 20px;
+    transition: 0.2s ease-in;
+    font-weight: 700;
+}
+
+.header-navigation ul li a:hover {
+    border-bottom: 1px solid black;
+    padding-bottom: 3px;
+}
+
+.header-toggle ul{
+    height: 55px;
+    width: 120px;
+    list-style: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+.header-toggle--dark {
+    border: 1px solid black;
+}
+
+.header-toggle--light {
+    border: 1px solid white;
+}
+
+
+.header-toggle ul li span {
+    display: block;
+    font-size: 25px;
+    line-height: 2;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+.header-toggle ul li span:nth-child(2) {
+    color: #1b1b1b;
+    border: 1px solid white;
+}
+
+.dark {
+    transform: translateY(-50px);
+}
+
+.light {
+    color: white;
+    transform: translateY(0px);
+    transition: .5s;
+}
+
+.header--img {
+    width: 40%;
+    animation: header_img 2s;
+}
+
+.header--img img {
+    width: 100%;
+}
+
+@keyframes header_img {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.header__text {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-family: monospace;
+    animation: header_text 2s ;
+}
+
+@keyframes header_text {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 120px;
+}
+
+.header__text--description {
+    display: inline;
+    white-space: nowrap;
+    border-right: 8px solid orange;
+    margin: 0 auto;
+    letter-spacing: 4px;
+    overflow: hidden;
+    font-size: 50px;
+    animation:  typing 3s steps(30, end),
+                blink-caret 0.6s step-end infinite;
+}
+
+@keyframes typing {
+    0%{
+        width: 0;
+    }
+    100% {
+        width: 400px;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {border-color: transparent}
+    50% {border-color: orange}
+}
+
+/*****HEADER end*****/
+
+/*****SKILLS start*****/
+
+.skills-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.second--title {
+    text-align: center;
+    font-size: 70px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    color: black;
+    text-transform: capitalize;
+}
+
+.skills-card {
+    position: relative;
+    width: 20%;
+    background: linear-gradient(0deg, #1b1b1b, #222222, #1b1b1b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.skills-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.5);
+}
+
+.skills-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.skills-card__box--percent {
+    position: relative; 
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px black;
+    z-index: 100; 
+}
+
+.skills-card__box--number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.skills-card__box--number h3 {
+    color: black;
+    font-weight: 700;
+    font-size: 40px;
+    transition: 0.5s;
+}
+
+.skills-card:hover .skills-card__box--number h3 {
+    color: purple;
+    font-size: 50px;
+}
+
+.skills-card__box--number h3 span {
+    font-size: 24px;
+}
+
+.skills-card:hover .skills-card__box--number h3 span {
+    color: purple;
+    transition: 0.5s;
+}
+
+.skills-card__box--text {
+    position: relative;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.skills-card:hover .skills-card__box--text {
+    animation: skill 2s linear infinite;
+}
+
+@keyframes skill {
+    0% {
+        color: black;
+        text-shadow: none;
+    }
+    100% {
+        color: white;
+        text-shadow: 0 0 10px white;
+    }
+}
+
+.skills-card-svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 100;
+}
+
+.skills-card-svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: black;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+} 
+
+.skills-card-svg circle:nth-child(2){
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.skills-card:nth-child(1) .skills-card-svg circle:nth-child(2){
+    stroke: purple;
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+}
+
+.skills-card:nth-child(2) .skills-card-svg circle:nth-child(2){
+    stroke: purple;
+    stroke-dashoffset: calc(440 - (440 * 80) / 100);
+}
+
+.skills-card:nth-child(3) .skills-card-svg circle:nth-child(2){
+    stroke: purple;
+    stroke-dashoffset: calc(440 - (440 * 50) / 100);
+}
+
+.skills-card:nth-child(4) .skills-card-svg circle:nth-child(2){
+    stroke: purple;
+    stroke-dashoffset: calc(440 - (440 * 40) / 100);
+}
+
+
+/*****SKILLS end*****/
+/*****about me start*****/
+
+.about {
+    position: relative;
+    margin-top: 100px;
+}
+
+.about_circle {
+    position: relative;
+    overflow: hidden;
+}
+
+.about_circle {
+    width: 300px;
+    height: 300px;
+    float: left;
+    border-radius: 50%;
+    margin: 30px;
+    shape-outside: circle();
+}
+
+.about_circle img {
+    transform: translateX(-100px);
+}
+
+.about_circle--title {
+    font-size: 70px;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.about_circle--text {
+    padding-right: 50px;
+    font-size: 26px;
+}
+
+.about_sertificats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 180px;
+    flex-wrap: wrap;
+}
+
+.about_sertificats img {
+    width: 200px;
+    height: 200px;
+    box-shadow: 10px 10px 10px #1b1b1b;
+    border-radius: 5px;
+}
+
+/*****about end*****/
+/*****suggest start*****/
+
+.suggest li {
+    font-size: 40px;
+    margin-left: 70px;
+}
+
+/*****suggest end*****/
+/*****works*****/
+
+.works__items {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.works__items__item {
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+}
+
+.works__items__item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    margin-top: 60px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+    height: 200px;
+}
+
+.footer_contact {
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.footer_contact a {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 15px;
+    transition: 0.2s ease-in;
+}
+
+.footer_contact a:hover {
+    transition: 0.2s ease-in;
+    border-bottom: 1px solid black;
+    padding-bottom: 3px;
+}
+
+.footer_contact span {
+    text-transform: capitalize;
+}
+
+.footer_social ul {
+    display: flex;
+    list-style: none;
+}
+
+.footer_social ul li {
+    margin-right: 50px;
+}
+
+/*****footer end*****/
+/*****page up start*****/
+.top {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 101;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    padding: 15px 30px;
+    background: purple;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/*****page up end*****/
+/*****футер гитхаб кодпен вк*****/
