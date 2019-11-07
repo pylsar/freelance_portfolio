@@ -5,8 +5,8 @@
 }
 
 body {
-    background: #f0f8ff;
-    color: black;
+    background: #1b1b1b;
+    color: white;
 }
 
 
@@ -40,7 +40,7 @@ body {
 }
 
 .header-navigation ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     padding-bottom: 20px;
     transition: 0.2s ease-in;
@@ -64,17 +64,18 @@ body {
 }
 
 .header-toggle--dark {
-    border: 1px solid black;
+    border: 1px solid white;
+    margin-bottom: 5px;
 }
 
 .header-toggle--light {
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 
 .header-toggle ul li span {
     display: block;
-    font-size: 25px;
+    font-size: 24px;
     line-height: 2;
     text-align: center;
     text-transform: uppercase;
@@ -83,7 +84,8 @@ body {
 }
 
 .header-toggle ul li span:nth-child(2) {
-    color: #1b1b1b;
+
+    color: white;
     border: 1px solid white;
 }
 
@@ -122,7 +124,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    color: black;
+    color: white;
     font-family: monospace;
     animation: header_text 2s ;
 }
@@ -181,7 +183,7 @@ h1 {
     font-size: 70px;
     margin-top: 60px;
     margin-bottom: 60px;
-    color: black;
+    color: white;
     text-transform: capitalize;
 }
 
@@ -236,7 +238,7 @@ h1 {
 }
 
 .skills-card__box--number h3 {
-    color: black;
+    color: white;
     font-weight: 700;
     font-size: 40px;
     transition: 0.5s;
@@ -435,7 +437,7 @@ h1 {
 }
 
 .footer_contact a {
-    color: black;
+    color: white;
     text-decoration: none;
     padding-bottom: 15px;
     transition: 0.2s ease-in;
@@ -454,11 +456,17 @@ h1 {
 .footer_social ul {
     display: flex;
     list-style: none;
+    margin-right: 150px;
 }
 
 .footer_social ul li {
-    margin-right: 50px;
+    margin-right: 20px;
 }
+
+.footer_social ul li a svg:hover {
+    opacity: 0.6;
+}
+
 
 /*****footer end*****/
 /*****page up start*****/

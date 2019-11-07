@@ -1,11 +1,11 @@
 $(document).ready(function(){
   //change mode
-  $('#dark').on('click', function(){
+  $('#light').on('click', function(){
     $('body').css('background', '#1b1b1b');
     $('body, h1, h2, a, .header__text--description').css('color', 'white');
     $('.header-toggle ul li').toggleClass('dark');
   });
-  $('#light').on('click', function(){
+  $('#dark').on('click', function(){
     $('body').css('background', '#f0f8ff');
     $('body, h1, h2, a, .header__text--description').css('color', 'black');
     $('.header-toggle ul li').toggleClass('dark');
