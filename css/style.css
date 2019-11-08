@@ -486,4 +486,49 @@ h1 {
     font-weight: bold;
 }
 /*****page up end*****/
-/*****футер гитхаб кодпен вк*****/
+/*****adaptive start*****/
+
+@media screen and (max-width: 1000px){
+	.about_sertificats {
+        margin-top: 90px;
+    }
+    
+    .top {
+        padding: 10px 15px;
+    }
+		
+}
+
+@media screen and (max-width: 900px){
+    .about_sertificats {
+        margin-top: 40px;
+    }
+
+    .footer_contact {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    h1 {
+        font-size: 100px;
+    }
+    .second--title {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .about_circle--text {
+        font-size: 24px;
+    }
+
+    .about_circle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .about_sertificats div{
+        margin-right: 60px;
+        margin-left: 60px;
+        margin-top: 15px;
+    }
+}
